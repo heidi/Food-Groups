@@ -1,6 +1,8 @@
 package edu.berkeley.cs160.fugue;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +10,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class FoodGroupsActivity extends Activity implements OnClickListener {
+	
+	AlertDialog logOrPlan;
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,24 @@ public class FoodGroupsActivity extends Activity implements OnClickListener {
         recipesearchButton.setOnClickListener (this); 
         Button menuButton = (Button)findViewById(R.id.menu_button);
         menuButton.setOnClickListener (this);
+        
+        
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Would you like to record a home cooked meal now, or invite friends to cook with you later?")
+               .setCancelable(false)
+               .setPositiveButton("Record", new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int id) {
+                        // TODO: go to log home cooked meal activity
+                	   dialog.cancel();
+                   }
+               })
+               .setNegativeButton("Plan", new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int id) {
+                        // TODO: go to meal planning activity
+                	   dialog.cancel();
+                   }
+               });
+        logOrPlan = builder.create();
     }
 
 	@Override
@@ -37,6 +60,7 @@ public class FoodGroupsActivity extends Activity implements OnClickListener {
 			break;
 			case R.id.homecooking_button:
 				// TODO: go to create event or log meal activity
+				logOrPlan.show();
 			break;
 			case R.id.restaurant_button:
 				// TODO: go to restaurant check in activity
