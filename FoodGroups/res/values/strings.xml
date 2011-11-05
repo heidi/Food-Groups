@@ -7,5 +7,8 @@
     <string name="homecooking">Home Cooking</string>
     <string name="searchrecipes">Search Recipes</string>
     <string name="menu">Menu</string>
-    <string name="back">Back</string>    
+    <string name="back">Back</string> 
+    <string name="today">Today</string>
+    <string name="thisweek">This Week</string>
+    <string name="alltime">All Time</string>
 </resources>
