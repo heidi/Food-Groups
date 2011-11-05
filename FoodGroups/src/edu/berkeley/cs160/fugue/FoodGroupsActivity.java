@@ -1,6 +1,7 @@
 package edu.berkeley.cs160.fugue;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,6 +22,8 @@ public class FoodGroupsActivity extends Activity implements OnClickListener {
         restaurantButton.setOnClickListener (this); 
         Button recipesearchButton = (Button)findViewById(R.id.recipesearch_button);
         recipesearchButton.setOnClickListener (this); 
+        Button menuButton = (Button)findViewById(R.id.menu_button);
+        menuButton.setOnClickListener (this);
     }
 
 	@Override
@@ -29,16 +32,20 @@ public class FoodGroupsActivity extends Activity implements OnClickListener {
 		switch (v.getId()) {
 		
 			case R.id.leaderboard_button:
-				// TODO
+				Intent myIntent = new Intent(v.getContext(), LeaderBoard.class);
+                startActivityForResult(myIntent, 0);
 			break;
 			case R.id.homecooking_button:
-				// TODO
+				// TODO: go to create event or log meal activity
 			break;
 			case R.id.restaurant_button:
-				// TODO
+				// TODO: go to restaurant check in activity
 			break;
 			case R.id.recipesearch_button:
-				// TODO
+				// TODO: go to recipe search activity
+			break;
+			case R.id.menu_button:
+				// TODO: go to food groups settings activity
 			break;
 		
 		}

@@ -2,9 +2,10 @@
 <resources>
     <string name="hello">Hello World, FoodGroupsActivity!</string>
     <string name="app_name">FoodGroups</string>
-    <string name="leaderboard">Leaderboard</string>
+    <string name="leaderboard">Leader Board</string>
     <string name="restaurantcheckin">Restaurant Check In</string>
     <string name="homecooking">Home Cooking</string>
     <string name="searchrecipes">Search Recipes</string>
-    
+    <string name="menu">Menu</string>
+    <string name="back">Back</string>   
 </resources>

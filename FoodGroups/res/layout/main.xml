@@ -4,8 +4,15 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/leaderboard" android:id="@+id/leaderboard_button"></Button>
-<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/homecooking" android:id="@+id/homecooking_button"></Button>
-<Button android:layout_width="wrap_content" android:id="@+id/restaurant_button" android:layout_height="wrap_content" android:text="@string/restaurantcheckin"></Button>
-<Button android:layout_width="wrap_content" android:id="@+id/recipesearch_button" android:layout_height="wrap_content" android:text="@string/searchrecipes"></Button>
+    <FrameLayout android:layout_width="fill_parent" android:id="@+id/frameLayout1" android:layout_height="fill_parent" android:layout_weight="70"></FrameLayout>
+<LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout1" android:layout_height="fill_parent" android:layout_weight="60">
+    <Button android:text="@string/leaderboard" android:id="@+id/leaderboard_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent"></Button>
+    <Button android:text="@string/restaurantcheckin" android:id="@+id/restaurant_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent"></Button>
+</LinearLayout>
+<LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:layout_weight="60">
+    <Button android:text="@string/homecooking" android:id="@+id/homecooking_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent"></Button>
+    <Button android:text="@string/searchrecipes" android:id="@+id/recipesearch_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent"></Button>
+</LinearLayout>
+<FrameLayout android:layout_width="fill_parent" android:id="@+id/frameLayout2" android:layout_height="fill_parent" android:layout_weight="60"></FrameLayout>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu" android:layout_gravity="right" android:id="@+id/menu_button"></Button>
 </LinearLayout>
