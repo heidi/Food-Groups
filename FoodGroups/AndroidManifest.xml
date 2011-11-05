@@ -12,6 +12,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".LeaderBoard"></activity>
+        <activity android:name=".HomeCookingLogActivity"></activity>
 
     </application>
 </manifest>

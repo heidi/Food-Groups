@@ -9,9 +9,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class FoodGroupsActivity extends Activity implements OnClickListener {
+public class FoodGroupsActivity extends Activity implements OnClickListener, DialogInterface.OnClickListener{
 	
 	AlertDialog logOrPlan;
+	boolean logOrPlanFlag;
 	
     /** Called when the activity is first created. */
     @Override
@@ -19,6 +20,7 @@ public class FoodGroupsActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        // set click listener
         Button leaderboardButton = (Button)findViewById(R.id.leaderboard_button);
         leaderboardButton.setOnClickListener (this); 
         Button homecookingButton = (Button)findViewById(R.id.homecooking_button);
@@ -30,22 +32,12 @@ public class FoodGroupsActivity extends Activity implements OnClickListener {
         Button menuButton = (Button)findViewById(R.id.menu_button);
         menuButton.setOnClickListener (this);
         
-        
+        // create dialog for cooked meal logging
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Would you like to record a home cooked meal now, or invite friends to cook with you later?")
                .setCancelable(false)
-               .setPositiveButton("Record", new DialogInterface.OnClickListener() {
-                   public void onClick(DialogInterface dialog, int id) {
-                        // TODO: go to log home cooked meal activity
-                	   dialog.cancel();
-                   }
-               })
-               .setNegativeButton("Plan", new DialogInterface.OnClickListener() {
-                   public void onClick(DialogInterface dialog, int id) {
-                        // TODO: go to meal planning activity
-                	   dialog.cancel();
-                   }
-               });
+               .setPositiveButton("Record", this)
+               .setNegativeButton("Plan", this);
         logOrPlan = builder.create();
     }
 
@@ -59,7 +51,6 @@ public class FoodGroupsActivity extends Activity implements OnClickListener {
                 startActivityForResult(myIntent, 0);
 			break;
 			case R.id.homecooking_button:
-				// TODO: go to create event or log meal activity
 				logOrPlan.show();
 			break;
 			case R.id.restaurant_button:
@@ -74,5 +65,19 @@ public class FoodGroupsActivity extends Activity implements OnClickListener {
 		
 		}
 		
+	}
+
+	@Override
+	public void onClick(DialogInterface dialog, int which) {
+		if (which == DialogInterface.BUTTON_POSITIVE) {
+			
+			Intent in = new Intent(this, HomeCookingLogActivity.class);
+			startActivityForResult(in, 0);
+			
+			dialog.dismiss();
+			
+		} else {
+			// TODO: start meal planning activity
+		}
 	}
 }
