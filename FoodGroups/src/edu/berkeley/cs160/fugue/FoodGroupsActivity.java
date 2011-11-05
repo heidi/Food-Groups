@@ -1,6 +1,5 @@
 package edu.berkeley.cs160.fugue;
 
-import edu.berkeley.cs160.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
