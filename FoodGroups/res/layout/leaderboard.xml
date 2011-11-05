@@ -5,5 +5,15 @@
   android:layout_width="fill_parent"
   android:layout_height="fill_parent">
     <Button android:layout_width="wrap_content" android:id="@+id/button1" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:layout_marginLeft="19dp" android:layout_marginBottom="16dp" android:text="@string/back" android:layout_height="35dp"></Button>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/button3" android:layout_alignBottom="@+id/button2" android:layout_centerHorizontal="true" android:text="@string/thisweek"></Button>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/button4" android:layout_alignBottom="@+id/button3" android:layout_toRightOf="@+id/button3" android:layout_marginLeft="20dp" android:text="@string/alltime"></Button>
+    <EditText android:id="@+id/editText1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/button2" android:layout_alignParentLeft="true" android:layout_marginTop="14dp" android:layout_alignParentRight="true">
+        <requestFocus></requestFocus>
+    </EditText>
+    <EditText android:id="@+id/editText2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/editText1" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"></EditText>
+    <EditText android:id="@+id/editText3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/editText2" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"></EditText>
+    <EditText android:id="@+id/editText4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/editText3" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"></EditText>
+    <EditText android:id="@+id/editText5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/editText4" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"></EditText>
+    <Button android:layout_width="80dp" android:text="@string/today" android:layout_height="wrap_content" android:id="@+id/button2" android:layout_alignParentTop="true" android:layout_alignLeft="@+id/button1" android:layout_marginTop="21dp"></Button>
     
 </RelativeLayout>
