@@ -38,7 +38,7 @@ public class FoodGroupsActivity extends Activity implements OnClickListener, Dia
                .setCancelable(false)
                .setPositiveButton("Record", this)
                .setNegativeButton("Plan", this);
-        logOrPlan = builder.create();
+        logOrPlan = builder.create(); 
     }
 
 	@Override
