@@ -12,7 +12,6 @@ import android.widget.Button;
 public class FoodGroupsActivity extends Activity implements OnClickListener, DialogInterface.OnClickListener{
 	
 	AlertDialog logOrPlan;
-	boolean logOrPlanFlag;
 	
     /** Called when the activity is first created. */
     @Override
@@ -38,7 +37,7 @@ public class FoodGroupsActivity extends Activity implements OnClickListener, Dia
                .setCancelable(false)
                .setPositiveButton("Record", this)
                .setNegativeButton("Plan", this);
-        logOrPlan = builder.create();
+        logOrPlan = builder.create(); 
     }
 
 	@Override
@@ -79,7 +78,11 @@ public class FoodGroupsActivity extends Activity implements OnClickListener, Dia
 			dialog.dismiss();
 			
 		} else {
-			// TODO: start meal planning activity
+			
+			Intent in = new Intent(this, PlanMealActivity.class);
+			startActivityForResult(in, 0);
+			
+			dialog.dismiss();
 		}
 	}
 }
