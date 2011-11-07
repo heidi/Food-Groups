@@ -26,14 +26,15 @@ public class PlanMealActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		
 		switch(v.getId()) {
+			case R.id.planmealdone_button:
+			// TODO
+			
 			case R.id.planmealback_button:
 				Intent back = new Intent();
                 setResult(RESULT_OK, back);
                 finish();
 			break;
-			case R.id.planmealdone_button:
-				// TODO
-			break;
+			
 			case R.id.addfriends_button:
 				Intent i = new Intent(v.getContext(), FriendSearchActivity.class);
 				startActivityForResult(i, 0);

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="fill_parent" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/linearLayout1">
-        <TextView android:layout_weight="1" android:text="TextView" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+        <TextView android:layout_weight="1" android:text="@string/selectfriends" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
         <LinearLayout android:layout_weight="1" android:layout_width="fill_parent" android:id="@+id/linearLayout2" android:layout_height="wrap_content">
             <EditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="10" android:id="@+id/friendsearch_textfield"></EditText>
-            <Button android:text="Button" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="30" android:id="@+id/friendsearchsearch_button"></Button>
+            <Button android:text="@string/searchbutton" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="30" android:id="@+id/friendsearchsearch_button"></Button>
         </LinearLayout>
         <ScrollView android:layout_weight="60" android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
             <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">

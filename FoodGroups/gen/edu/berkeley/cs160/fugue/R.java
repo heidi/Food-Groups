@@ -89,8 +89,10 @@ public final class R {
         public static final int protein=0x7f04000e;
         public static final int recipetitle=0x7f040010;
         public static final int restaurantcheckin=0x7f040003;
-        public static final int search=0x7f040013;
+        public static final int search=0x7f040014;
+        public static final int searchbutton=0x7f040015;
         public static final int searchrecipes=0x7f040005;
+        public static final int selectfriends=0x7f040013;
         public static final int thisweek=0x7f040009;
         public static final int today=0x7f040008;
         public static final int vegetable=0x7f04000d;

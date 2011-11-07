@@ -17,6 +17,8 @@ public class HomeCookingLogActivity extends Activity implements OnClickListener 
         backButton.setOnClickListener(this);
         Button searchButton = (Button) findViewById(R.id.addcooks_button);
         searchButton.setOnClickListener(this);
+        Button doneButton = (Button) findViewById(R.id.homecookingdone_button);
+        doneButton.setOnClickListener(this);
         
 	}
 
@@ -24,6 +26,8 @@ public class HomeCookingLogActivity extends Activity implements OnClickListener 
 	public void onClick(View v) {
 		
 		switch (v.getId()) {
+			case R.id.homecookingdone_button:
+			// TODO: record meal
 			case R.id.homecookingback_button:
 				Intent back = new Intent();
                 setResult(RESULT_OK, back);
