@@ -13,15 +13,15 @@
         </activity>
         <activity android:name=".LeaderBoard"></activity>
         <activity android:name=".HomeCookingLogActivity"></activity>
-<<<<<<< HEAD
+
         <activity android:name=".SearchRecipes"></activity>
         <activity android:name=".Today"></activity>
         <activity android:name=".ThisWeek"></activity>
         <activity android:name=".AllTime"></activity>
-=======
+
         <activity android:name=".FriendSearchActivity"></activity>
         <activity android:name=".PlanMealActivity"></activity>
 
->>>>>>> f33cac047bdab66d578a8a3c90fafcfd04401c78
+
     </application>
 </manifest>

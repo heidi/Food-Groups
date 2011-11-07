@@ -1,10 +1,14 @@
 package edu.berkeley.cs160.fugue;
 
 
+import java.io.IOException;
+import java.io.InputStream;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 import android.content.Intent;
@@ -15,6 +19,9 @@ import android.net.*;
 
 
 public class LeaderBoard extends Activity {
+	
+	TextView aView;
+	ImageView anImage;
 
     /** Called when the activity is first created. */
     public void onCreate(Bundle savedInstanceState) {
@@ -26,7 +33,9 @@ public class LeaderBoard extends Activity {
         Button thisWeek = (Button) findViewById(R.id.button3);
         Button allTime = (Button) findViewById(R.id.button4);
         
-        TextView aView = (TextView) findViewById(R.id.textView1);
+        aView = (TextView) findViewById(R.id.textView1);
+        anImage = (ImageView) findViewById(R.id.imageView1);
+        loadDataFromAsset();        
         
         today.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -65,6 +74,18 @@ public class LeaderBoard extends Activity {
             }
 
         });
+    }
+    
+    
+    public void loadDataFromAsset(){
+       	try{
+       		InputStream ims = getAssets().open("TodayLeaderboard.png");
+       		Drawable d = Drawable.createFromStream(ims, null);
+       		anImage.setImageDrawable(d);        		
+        }
+       	catch(IOException ex){
+       		return;
+       	}
     }
 }
 
