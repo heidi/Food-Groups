@@ -15,11 +15,14 @@ public final class R {
     }
     public static final class id {
         public static final int addcooks_button=0x7f05000a;
+        public static final int addfriends_button=0x7f050027;
         public static final int addpicture_button=0x7f050008;
         public static final int button1=0x7f05001a;
         public static final int button2=0x7f05001c;
         public static final int button3=0x7f05001b;
         public static final int button4=0x7f05001d;
+        public static final int datePicker1=0x7f050026;
+        public static final int editText1=0x7f050028;
         public static final int frameLayout1=0x7f05001e;
         public static final int frameLayout2=0x7f050023;
         public static final int friendsearch_textfield=0x7f050003;
@@ -38,8 +41,8 @@ public final class R {
         public static final int linearLayout6=0x7f050013;
         public static final int linearLayout7=0x7f050017;
         public static final int menu_button=0x7f050024;
-        public static final int planmealback_button=0x7f050025;
-        public static final int planmealdone_button=0x7f050026;
+        public static final int planmealback_button=0x7f050029;
+        public static final int planmealdone_button=0x7f05002a;
         public static final int recipe_textfeild=0x7f050016;
         public static final int recipesearch_button=0x7f050022;
         public static final int recipetitle_textfield=0x7f05000b;
@@ -53,6 +56,7 @@ public final class R {
         public static final int textView3=0x7f050011;
         public static final int textView4=0x7f050014;
         public static final int textView5=0x7f050009;
+        public static final int timePicker1=0x7f050025;
     }
     public static final class layout {
         public static final int friendsearch=0x7f030000;
