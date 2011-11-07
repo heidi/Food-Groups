@@ -8,5 +8,7 @@
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/button3" android:layout_alignBottom="@+id/button2" android:layout_centerHorizontal="true" android:text="@string/thisweek"></Button>
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/button4" android:layout_alignBottom="@+id/button3" android:layout_toRightOf="@+id/button3" android:layout_marginLeft="20dp" android:text="@string/alltime"></Button>
     <Button android:layout_width="80dp" android:text="@string/today" android:layout_height="wrap_content" android:id="@+id/button2" android:layout_alignParentTop="true" android:layout_alignLeft="@+id/button1" android:layout_marginTop="21dp"></Button>
+    <TextView android:layout_width="wrap_content" android:text="TextView" android:id="@+id/textView1" android:layout_below="@+id/button3" android:layout_marginTop="14dp" android:layout_alignLeft="@+id/button2" android:layout_alignRight="@+id/button4" android:layout_height="30dp"></TextView>
+    <ImageView android:id="@+id/imageView1" android:layout_height="400dp" android:layout_width="wrap_content" android:src="@drawable/icon" android:layout_alignTop="@+id/button2" android:layout_alignLeft="@+id/button2" android:layout_alignRight="@+id/button4"></ImageView>
     
 </RelativeLayout>
