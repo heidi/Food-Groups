@@ -13,6 +13,8 @@
         </activity>
         <activity android:name=".LeaderBoard"></activity>
         <activity android:name=".HomeCookingLogActivity"></activity>
+        <activity android:name=".FriendSearchActivity"></activity>
+        <activity android:name=".PlanMealActivity"></activity>
 
     </application>
 </manifest>
