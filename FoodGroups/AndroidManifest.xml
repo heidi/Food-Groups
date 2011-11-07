@@ -13,6 +13,9 @@
         </activity>
         <activity android:name=".LeaderBoard"></activity>
         <activity android:name=".HomeCookingLogActivity"></activity>
-
+        <activity android:name=".SearchRecipes"></activity>
+        <activity android:name=".Today"></activity>
+        <activity android:name=".ThisWeek"></activity>
+        <activity android:name=".AllTime"></activity>
     </application>
 </manifest>

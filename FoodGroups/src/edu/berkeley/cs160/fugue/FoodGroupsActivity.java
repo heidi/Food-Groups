@@ -53,10 +53,12 @@ public class FoodGroupsActivity extends Activity implements OnClickListener, Dia
 			case R.id.homecooking_button:
 				logOrPlan.show();
 			break;
-			case R.id.restaurant_button:
+			case R.id.restaurant_button:				
 				// TODO: go to restaurant check in activity
 			break;
 			case R.id.recipesearch_button:
+				Intent youIntent = new Intent(v.getContext(), SearchRecipes.class);
+                startActivityForResult(youIntent, 0);
 				// TODO: go to recipe search activity
 			break;
 			case R.id.menu_button:
