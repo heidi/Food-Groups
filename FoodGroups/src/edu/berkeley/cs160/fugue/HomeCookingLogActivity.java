@@ -16,14 +16,10 @@ public class HomeCookingLogActivity extends Activity implements OnClickListener 
         Button backButton = (Button) findViewById(R.id.homecookingback_button);
         backButton.setOnClickListener(this);
         Button searchButton = (Button) findViewById(R.id.addcooks_button);
-<<<<<<< HEAD
-        searchButton.setOnClickListener(this);        
-=======
         searchButton.setOnClickListener(this);
         Button doneButton = (Button) findViewById(R.id.homecookingdone_button);
         doneButton.setOnClickListener(this);
         
->>>>>>> 189cebc6b3b8903605494e325e6d8a6617e93eeb
 	}
 
 	@Override
