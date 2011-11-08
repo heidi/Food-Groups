@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="fill_parent" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/linearLayout1">
-        <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout2" android:layout_height="wrap_content">
-            <ImageButton android:src="@drawable/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/addpicture_button" android:layout_weight="10"></ImageButton>
-            <TextView android:layout_width="wrap_content" android:id="@+id/textView5" android:layout_height="wrap_content" android:layout_weight="50" android:text="something that lists collaborators"></TextView>
-            <Button android:layout_width="wrap_content" android:id="@+id/addcooks_button" android:layout_height="wrap_content" android:text="@string/addfriends" android:layout_weight="20"></Button>
+        <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout2" android:layout_height="wrap_content" android:layout_weight="30">
+            <Button android:id="@+id/addpicture_button" android:layout_width="96dp" android:background="@drawable/blankmeal" android:layout_height="match_parent"></Button>
+            <TextView android:layout_width="wrap_content" android:id="@+id/textView5" android:layout_weight="50" android:text="Alice, Bob, Chris" android:layout_height="match_parent"></TextView>
+            <Button android:layout_width="wrap_content" android:id="@+id/addcooks_button" android:text="@string/addfriends" android:layout_weight="20" android:layout_height="match_parent"></Button>
         </LinearLayout>
         <EditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/recipetitle_textfield" android:text="@string/recipetitle">
             <requestFocus></requestFocus>
@@ -24,7 +24,7 @@
             <TextView android:id="@+id/textView4" android:layout_height="wrap_content" android:text="@string/carbohydrate" android:layout_width="fill_parent" android:layout_weight="40"></TextView>
             <SeekBar android:id="@+id/seekBar4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"></SeekBar>
         </LinearLayout>
-        <EditText android:inputType="textMultiLine" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="40" android:id="@+id/recipe_textfeild" android:text="@string/addrecipe"></EditText>
+        <EditText android:inputType="textMultiLine" android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/recipe_textfeild" android:text="@string/addrecipe" android:layout_weight="75"></EditText>
         <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout7" android:layout_height="wrap_content">
             <Button android:layout_height="wrap_content" android:id="@+id/homecookingback_button" android:layout_width="fill_parent" android:layout_weight="30" android:text="@string/back"></Button>
             <Button android:id="@+id/homecookingdone_button" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="20" android:text="@string/done"></Button>

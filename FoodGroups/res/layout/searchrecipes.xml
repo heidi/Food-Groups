@@ -6,10 +6,11 @@
   android:layout_height="fill_parent">
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/button1" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:layout_marginLeft="31dp" android:layout_marginBottom="31dp" android:text="@string/back"></Button>
     <TextView android:layout_width="wrap_content" android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignLeft="@+id/button1" android:layout_marginTop="17dp" android:text="@string/search"></TextView>
-    <EditText android:layout_width="wrap_content" android:inputType="textPersonName" android:layout_height="wrap_content" android:id="@+id/editText1" android:layout_below="@+id/textView1" android:layout_alignLeft="@+id/textView1" android:layout_alignRight="@+id/textView1">
+    <EditText android:layout_width="wrap_content" android:inputType="textPersonName" android:layout_height="wrap_content" android:id="@+id/editText1" android:layout_below="@+id/textView1" android:layout_alignLeft="@+id/textView1" android:layout_toLeftOf="@+id/button3">
         <requestFocus></requestFocus>
     </EditText>
     <TextView android:layout_width="wrap_content" android:text="TextView" android:id="@+id/textView2" android:layout_height="wrap_content" android:layout_below="@+id/editText1" android:layout_alignLeft="@+id/editText1" android:layout_marginTop="21dp" android:layout_alignRight="@+id/editText1"></TextView>
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/button2" android:layout_alignBaseline="@+id/button1" android:layout_alignBottom="@+id/button1" android:layout_alignParentRight="true" android:layout_marginRight="16dp" android:text="@string/done"></Button>
+    <Button android:id="@+id/button3" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignBaseline="@+id/editText1" android:layout_alignBottom="@+id/editText1" android:layout_toLeftOf="@+id/button2" android:text="@string/searchbutton"></Button>
     
 </RelativeLayout>

@@ -23,14 +23,16 @@ public class FriendSearchActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		
 		switch (v.getId()) {
+		
+			case R.id.friendsearchdone_button:
+			// TODO: save selected friends
+		
 			case R.id.friendsearchback_button:
 				Intent back = new Intent();
                 setResult(RESULT_OK, back);
                 finish();
 			break;
-			case R.id.friendsearchdone_button:
-				// TODO: save selected friends
-			break;
+			
 		}
 		
 	}
