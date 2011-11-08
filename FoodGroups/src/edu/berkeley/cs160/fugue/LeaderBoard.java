@@ -35,8 +35,17 @@ public class LeaderBoard extends Activity {
         
         aView = (TextView) findViewById(R.id.textView1);
         anImage = (ImageView) findViewById(R.id.imageView1);
-        loadDataFromAsset();        
+        loadDataFromAsset("Today");  
         
+        today.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+            	anImage = (ImageView) findViewById(R.id.imageView1);
+            	loadDataFromAsset("Today");            
+            }
+
+        });
+       
+        /*
         today.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), Today.class);
@@ -44,18 +53,19 @@ public class LeaderBoard extends Activity {
             }
 
         });
+        */
         
         thisWeek.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), ThisWeek.class);
-                startActivityForResult(myIntent, 0);
+            	anImage = (ImageView) findViewById(R.id.imageView1);
+            	loadDataFromAsset("Weekly");
             }
         });
         
         allTime.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), AllTime.class);
-                startActivityForResult(myIntent, 0);
+            	anImage = (ImageView) findViewById(R.id.imageView1);
+            	loadDataFromAsset("Alltime");
             }
 
         });
@@ -74,9 +84,20 @@ public class LeaderBoard extends Activity {
             }
 
         });
+    }    
+    
+    public void loadDataFromAsset(String name){
+       	try{
+       		InputStream ims = getAssets().open(name + "Leaderboard.png");
+       		Drawable d = Drawable.createFromStream(ims, null);
+       		anImage.setImageDrawable(d);        		
+        }
+       	catch(IOException ex){
+       		return;
+       	}
     }
     
-    
+    /*
     public void loadDataFromAsset(){
        	try{
        		InputStream ims = getAssets().open("TodayLeaderboard.png");
@@ -87,6 +108,6 @@ public class LeaderBoard extends Activity {
        		return;
        	}
     }
+    */
 }
 
-// Change

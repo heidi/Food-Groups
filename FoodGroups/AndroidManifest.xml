@@ -15,9 +15,8 @@
         <activity android:name=".HomeCookingLogActivity"></activity>
 
         <activity android:name=".SearchRecipes"></activity>
-        <activity android:name=".Today"></activity>
-        <activity android:name=".ThisWeek"></activity>
-        <activity android:name=".AllTime"></activity>
+        
+        
 
         <activity android:name=".FriendSearchActivity"></activity>
         <activity android:name=".PlanMealActivity"></activity>
