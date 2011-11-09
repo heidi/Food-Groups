@@ -1,8 +1,6 @@
 package edu.berkeley.cs160.fugue;
 
 import android.app.Activity;
-import android.app.ListActivity;
-import android.app.SearchManager;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -10,8 +8,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.RadioButton;
-import android.widget.Toast;
 import android.content.Intent;
 import android.widget.Button;
 import java.util.ArrayList;
@@ -20,7 +16,7 @@ public class SearchRecipes extends Activity {
 	
 	private ListView aView;
 	private EditText typing;
-	private String lv_arr[]={"Android","Cupcake","Donut","Eclairs","AndroidPeople","Froyo",};
+	private String lv_arr[]={"Carrot","Beef","Pork","Fugue","Chicken","Green Onion","Fish", "Broccoli", "Cat Fish"};
 	private ArrayList<String> arr_sort = new ArrayList<String>();
 	int textlength = 0;
 
