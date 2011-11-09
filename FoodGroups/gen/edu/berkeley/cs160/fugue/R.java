@@ -14,6 +14,7 @@ public final class R {
         public static final int blankmeal=0x7f020000;
         public static final int friendssearch=0x7f020001;
         public static final int icon=0x7f020002;
+        public static final int tablewarejollyroger=0x7f020003;
     }
     public static final class id {
         public static final int addcooks_button=0x7f05000d;
