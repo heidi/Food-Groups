@@ -16,7 +16,7 @@ public class SearchRecipes extends Activity {
 	
 	private ListView aView;
 	private EditText typing;
-	private String lv_arr[]={"Carrot","Beef","Pork","Fugue","Chicken","Green Onion","Fish", "Broccoli", "Cat Fish"};
+	private String recipesArray[]={"Carrot","Beef","Pork","Fugue","Chicken","Green Onion","Fish", "Broccoli", "Cat Fish"};
 	private ArrayList<String> arr_sort = new ArrayList<String>();
 	int textlength = 0;
 
@@ -27,7 +27,7 @@ public class SearchRecipes extends Activity {
         
         aView = (ListView) findViewById(R.id.listView1);
         typing = (EditText) findViewById(R.id.editText1);
-        aView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lv_arr));
+        aView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, recipesArray));
         typing.addTextChangedListener(new TextWatcher(){
         	
         	public void afterTextChanged(Editable s) {
@@ -39,25 +39,20 @@ public class SearchRecipes extends Activity {
         	public void onTextChanged(CharSequence s, int start, int before, int count) {
         		textlength=typing.getText().length();
         		arr_sort.clear();
-        		for(int i=0;i<lv_arr.length;i++)
+        		for(int i=0;i<recipesArray.length;i++)
         		{
-        			if(textlength<=lv_arr[i].length())
+        			if(textlength<=recipesArray[i].length())
         			{
-        				if(typing.getText().toString().equalsIgnoreCase((String) lv_arr[i].subSequence(0, textlength)))
+        				if(typing.getText().toString().equalsIgnoreCase((String) recipesArray[i].subSequence(0, textlength)))
         				{
-        					arr_sort.add(lv_arr[i]);
+        					arr_sort.add(recipesArray[i]);
         				}
         			}
         		}
         		
         			aView.setAdapter(new ArrayAdapter<String>(SearchRecipes.this,android.R.layout.simple_list_item_1 , arr_sort));
         		}
-        });
-
-
-        
-        
-        
+        });        
 
         Button previous = (Button) findViewById(R.id.button1);               
         
