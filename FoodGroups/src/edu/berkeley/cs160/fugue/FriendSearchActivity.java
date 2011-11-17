@@ -9,6 +9,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+
+import android.widget.CheckedTextView;
 import android.widget.ListView;
 
 public class FriendSearchActivity extends Activity implements OnClickListener, OnItemClickListener {
@@ -28,8 +30,11 @@ public class FriendSearchActivity extends Activity implements OnClickListener, O
         doneButton.setOnClickListener(this);
         
         ListView friendList = (ListView) findViewById(R.id.friendlist);
-        friendList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, contacts));
+        friendList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, contacts));
         friendList.setOnItemClickListener(this);
+        
+        // TODO: add search bar listener that calls list.setSelection on the correct position in the list based on query
+        
 	}
 
 	@Override
@@ -58,7 +63,9 @@ public class FriendSearchActivity extends Activity implements OnClickListener, O
 	@Override
 	public void onItemClick(AdapterView<?> list, View view, int pos, long id) {
 		// TODO Auto-generated method stub
-		
+		// list.setSelection(pos);
+		CheckedTextView checkView = (CheckedTextView) view;
+		checkView.setChecked(!checkView.isChecked());
 		
 	}
 }
