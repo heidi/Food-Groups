@@ -5,9 +5,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 
-public class FriendSearchActivity extends Activity implements OnClickListener {
+public class FriendSearchActivity extends Activity implements OnClickListener, OnItemClickListener {
+	
+	// TODO: eventually this shouldn't be hardcoded
+	String contacts[] = {"Albert", "Alice", "Bob", "Bonnie", "Calvin", "Chris", "Colleen", "Fred", "George", 
+			"Harry", "Heather", "Hidalgo", "Hyde", "Mellisa", "Vince"};
+	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +26,10 @@ public class FriendSearchActivity extends Activity implements OnClickListener {
         backButton.setOnClickListener(this);
         Button doneButton = (Button)findViewById(R.id.friendsearchdone_button);
         doneButton.setOnClickListener(this);
+        
+        ListView friendList = (ListView) findViewById(R.id.friendlist);
+        friendList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, contacts));
+        friendList.setOnItemClickListener(this);
 	}
 
 	@Override
@@ -31,9 +44,21 @@ public class FriendSearchActivity extends Activity implements OnClickListener {
 				Intent back = new Intent();
                 setResult(RESULT_OK, back);
                 finish();
-			break;
+                break;
+			case R.id.friendlist:
+				// TODO
+				finish();
+				break;
+				
 			
 		}
+		
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> list, View view, int pos, long id) {
+		// TODO Auto-generated method stub
+		
 		
 	}
 }
