@@ -46,7 +46,7 @@ public class FoodGroupsActivity extends Activity implements OnClickListener, Dia
 		switch (v.getId()) {
 		
 			case R.id.leaderboard_button:
-				Intent myIntent = new Intent(v.getContext(), LeaderBoard.class);
+				Intent myIntent = new Intent(v.getContext(), LeaderBoardActivity.class);
                 startActivityForResult(myIntent, 0);
                 break;
 			case R.id.homecooking_button:

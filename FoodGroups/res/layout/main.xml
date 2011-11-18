@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
+    android:background="@drawable/tablecloth">
     <FrameLayout android:layout_width="fill_parent" android:id="@+id/frameLayout1" android:layout_height="fill_parent" android:layout_weight="70"></FrameLayout>
 <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout1" android:layout_height="fill_parent" android:layout_weight="60">
     <Button android:text="@string/leaderboard" android:id="@+id/leaderboard_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent"></Button>

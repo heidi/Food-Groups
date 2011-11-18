@@ -10,7 +10,7 @@
         </EditText>
         <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout3" android:layout_height="wrap_content">
             <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:text="@string/fruit" android:layout_width="fill_parent" android:layout_weight="40"></TextView>
-            <SeekBar android:id="@+id/seekBar1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"></SeekBar>
+            <SeekBar android:layout_weight="20" android:layout_height="wrap_content" android:id="@+id/seekBar1" android:layout_width="fill_parent"></SeekBar>
         </LinearLayout>
         <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout4" android:layout_height="wrap_content">
             <TextView android:id="@+id/textView2" android:layout_height="wrap_content" android:text="@string/vegetable" android:layout_width="fill_parent" android:layout_weight="40"></TextView>

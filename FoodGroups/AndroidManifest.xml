@@ -12,6 +12,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".LeaderBoard"></activity>
+        <activity android:name=".LeaderBoardActivity"></activity>
         <activity android:name=".HomeCookingLogActivity"></activity>
         <activity android:name=".SearchRecipes"></activity>
         <activity android:name=".FriendSearchActivity"></activity>

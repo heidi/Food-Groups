@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent">
-    <Button android:layout_width="wrap_content" android:id="@+id/button1" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:layout_marginLeft="19dp" android:layout_marginBottom="16dp" android:text="@string/back" android:layout_height="35dp"></Button>
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/button3" android:layout_alignBottom="@+id/button2" android:layout_centerHorizontal="true" android:text="@string/thisweek"></Button>
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/button4" android:layout_alignBottom="@+id/button3" android:layout_toRightOf="@+id/button3" android:layout_marginLeft="20dp" android:text="@string/alltime"></Button>
-    <Button android:layout_width="80dp" android:text="@string/today" android:layout_height="wrap_content" android:id="@+id/button2" android:layout_alignParentTop="true" android:layout_alignLeft="@+id/button1" android:layout_marginTop="21dp"></Button>
-    <TextView android:layout_width="wrap_content" android:text="TextView" android:id="@+id/textView1" android:layout_below="@+id/button3" android:layout_marginTop="14dp" android:layout_alignLeft="@+id/button2" android:layout_alignRight="@+id/button4" android:layout_height="30dp"></TextView>
-    <ImageView android:id="@+id/imageView1" android:layout_height="400dp" android:layout_width="wrap_content" android:src="@drawable/icon" android:layout_alignTop="@+id/button2" android:layout_alignLeft="@+id/button2" android:layout_alignRight="@+id/button4"></ImageView>
+    <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:layout_width="match_parent" android:layout_weight="20" android:gravity="center_horizontal">
+        <Button android:layout_height="wrap_content" android:text="@string/today" android:layout_width="wrap_content" android:id="@+id/todaybutton"></Button>
+        <Button android:layout_height="wrap_content" android:text="@string/thisweek" android:layout_width="wrap_content" android:id="@+id/thisweekbutton"></Button>
+        <Button android:layout_height="wrap_content" android:text="@string/alltime" android:layout_width="wrap_content" android:id="@+id/alltimebutton"></Button>
+    </LinearLayout>
+    <ListView android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="60" android:id="@+id/leaderboardlist"></ListView>
+    <Button android:layout_height="wrap_content" android:text="@string/back" android:id="@+id/leaderboardback"  android:layout_width="wrap_content" android:layout_weight="20"></Button>
     
-</RelativeLayout>
+</LinearLayout>
