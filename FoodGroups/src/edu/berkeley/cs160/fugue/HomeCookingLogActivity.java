@@ -3,6 +3,7 @@ package edu.berkeley.cs160.fugue;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -23,6 +24,18 @@ public class HomeCookingLogActivity extends Activity implements OnClickListener 
         searchButton.setOnClickListener(this);
         Button doneButton = (Button) findViewById(R.id.homecookingdone_button);
         doneButton.setOnClickListener(this);
+        
+        
+        //set camera action
+        Button cameraShot = (Button) findViewById(R.id.addpicture_button); 
+        cameraShot.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+            	Intent getPictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            	startActivity(getPictureIntent);                
+                //finish();
+            }
+
+        });
         
 
 	}

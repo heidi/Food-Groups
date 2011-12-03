@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class FoodGroupsActivity extends Activity implements OnClickListener, DialogInterface.OnClickListener{
 	
-	AlertDialog logOrPlan;
+	//AlertDialog logOrPlan;
 	
     /** Called when the activity is first created. */
     @Override
@@ -20,24 +20,34 @@ public class FoodGroupsActivity extends Activity implements OnClickListener, Dia
         setContentView(R.layout.main);
         
         // set click listener
-        Button leaderboardButton = (Button)findViewById(R.id.leaderboard_button);
-        leaderboardButton.setOnClickListener (this); 
-        Button homecookingButton = (Button)findViewById(R.id.homecooking_button);
-        homecookingButton.setOnClickListener (this); 
-        Button restaurantButton = (Button)findViewById(R.id.restaurant_button);
-        restaurantButton.setOnClickListener (this); 
-        Button recipesearchButton = (Button)findViewById(R.id.recipesearch_button);
-        recipesearchButton.setOnClickListener (this); 
-        Button menuButton = (Button)findViewById(R.id.menu_button);
-        menuButton.setOnClickListener (this);
+        Button leaderboardButton = (Button) findViewById(R.id.leaderboard_button);
+        leaderboardButton.setOnClickListener(this); 
+        
+        Button homecookingButton = (Button) findViewById(R.id.homecooking_button);
+        homecookingButton.setOnClickListener(this); 
+        
+        Button restaurantButton = (Button) findViewById(R.id.restaurant_button);
+        restaurantButton.setOnClickListener(this); 
+        
+        Button recipesearchButton = (Button) findViewById(R.id.recipesearch_button);
+        recipesearchButton.setOnClickListener(this); 
+        
+        Button menuButton = (Button) findViewById(R.id.menu_button);
+        menuButton.setOnClickListener(this);
+        
+        Button mealplanButton = (Button) findViewById(R.id.mealplanning_button);
+        mealplanButton.setOnClickListener(this);
+        
+        Button profileButton = (Button) findViewById(R.id.profile_button);
+        profileButton.setOnClickListener(this);
         
         // create dialog for cooked meal logging
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        /*AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Would you like to record a home cooked meal now, or invite friends to cook with you later?")
                .setCancelable(false)
                .setPositiveButton("Record", this)
                .setNegativeButton("Plan", this);
-        logOrPlan = builder.create(); 
+        logOrPlan = builder.create(); */
     }
 
 	@Override
@@ -50,7 +60,20 @@ public class FoodGroupsActivity extends Activity implements OnClickListener, Dia
                 startActivityForResult(myIntent, 0);
                 break;
 			case R.id.homecooking_button:
-				logOrPlan.show();
+				// logOrPlan.show();
+				
+				Intent cook = new Intent(this, HomeCookingLogActivity.class);
+				startActivityForResult(cook, 0);
+				
+				break;
+			case R.id.mealplanning_button:
+				
+				Intent plan = new Intent(this, PlanMealActivity.class);
+				startActivityForResult(plan, 0);
+				
+				break;
+			case R.id.profile_button:
+				// TODO: go to WOZ image of a profile
 				break;
 			case R.id.restaurant_button:				
 				// TODO: go to restaurant check in activity

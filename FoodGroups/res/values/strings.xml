@@ -16,10 +16,14 @@
     <string name="vegetable"> Vegetable </string>
     <string name="protein"> Protein </string>
     <string name="carbohydrate"> Carbohydrate </string>
-    <string name="recipetitle">Recipe Title</string>
+    <string name="recipetitle">Recipe Title:</string>
     <string name="addrecipe">[optional] Add Recipe Here</string>
     <string name="done">Done</string>
     <string name="selectfriends">Select the Friends You Want to Cook With:</string>  
     <string name="search">Search for Recipes:</string>
     <string name="searchbutton">Search</string>
+    <string name="blank"></string>
+    <string name="servings">          Servings:</string>
+    <string name="planmeal">Plan Meal</string>
+    <string name="profile">Profile</string>
 </resources>

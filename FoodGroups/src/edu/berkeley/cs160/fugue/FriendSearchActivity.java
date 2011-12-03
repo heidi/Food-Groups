@@ -15,8 +15,8 @@ import android.widget.ListView;
 public class FriendSearchActivity extends Activity implements OnClickListener, OnItemClickListener {
 	
 	// TODO: eventually this shouldn't be hardcoded
-	String contacts[] = {"Albert", "Alice", "Bob", "Bonnie", "Calvin", "Chris", "Colleen", "Fred", "George", 
-			"Harry", "Heather", "Hidalgo", "Hyde", "Jessica", "John", "Matthew", "Melissa", "Vince"};
+	String contacts[] = {"Albert", "Alice", "Bob", "Bonnie", "Calvin", "Chris"};//, "Colleen", "Fred", "George", 
+	//		"Harry", "Heather", "Hidalgo", "Hyde", "Jessica", "John", "Matthew", "Melissa", "Vince"};
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,8 +55,6 @@ public class FriendSearchActivity extends Activity implements OnClickListener, O
 
 	@Override
 	public void onItemClick(AdapterView<?> list, View view, int pos, long i) {
-		// TODO Auto-generated method stub
-		// list.setSelection(pos);
 		
 		CheckedTextView checkView = (CheckedTextView) view;
 		

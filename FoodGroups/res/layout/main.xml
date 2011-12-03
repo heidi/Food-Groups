@@ -4,15 +4,19 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/tablecloth">
-    <FrameLayout android:layout_width="fill_parent" android:id="@+id/frameLayout1" android:layout_height="fill_parent" android:layout_weight="70"></FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:id="@+id/frameLayout1" android:layout_height="fill_parent" android:layout_weight="65"></FrameLayout>
 <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout1" android:layout_height="fill_parent" android:layout_weight="60">
-    <Button android:text="@string/leaderboard" android:id="@+id/leaderboard_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent"></Button>
-    <Button android:text="@string/restaurantcheckin" android:id="@+id/restaurant_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent"></Button>
+    <Button android:text="@string/leaderboard" android:id="@+id/leaderboard_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent" android:textSize="18sp"></Button>
+    <Button android:text="@string/restaurantcheckin" android:id="@+id/restaurant_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent" android:textSize="18sp"></Button>
 </LinearLayout>
 <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:layout_weight="60">
-    <Button android:text="@string/homecooking" android:id="@+id/homecooking_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent"></Button>
-    <Button android:text="@string/searchrecipes" android:id="@+id/recipesearch_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent"></Button>
+    <Button android:text="@string/homecooking" android:id="@+id/homecooking_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent" android:textSize="18sp"></Button>
+    <Button android:text="@string/searchrecipes" android:id="@+id/recipesearch_button" android:layout_width="fill_parent" android:layout_weight="30" android:layout_height="fill_parent" android:textSize="18sp"></Button>
+</LinearLayout>
+<LinearLayout android:id="@+id/LinearLayout01" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="60">
+    <Button android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="30" android:id="@+id/mealplanning_button" android:text="@string/planmeal" android:textSize="18sp"></Button>
+    <Button android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="30" android:id="@+id/profile_button" android:text="@string/profile" android:textSize="18sp"></Button>
 </LinearLayout>
 <FrameLayout android:layout_width="fill_parent" android:id="@+id/frameLayout2" android:layout_height="fill_parent" android:layout_weight="60"></FrameLayout>
-<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu" android:layout_gravity="right" android:id="@+id/menu_button"></Button>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu" android:layout_gravity="right" android:id="@+id/menu_button" android:textSize="18sp"></Button>
 </LinearLayout>
