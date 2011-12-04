@@ -7,8 +7,12 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class HomeCookingLogActivity extends Activity implements OnClickListener {
+	
+	private TextView friends;
+	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +29,9 @@ public class HomeCookingLogActivity extends Activity implements OnClickListener 
         Button doneButton = (Button) findViewById(R.id.homecookingdone_button);
         doneButton.setOnClickListener(this);
         
+        friends = (TextView) findViewById(R.id.friendsview);
+        friends.setText("");
+        
         
         //set camera action
         Button cameraShot = (Button) findViewById(R.id.addpicture_button); 
@@ -40,6 +47,11 @@ public class HomeCookingLogActivity extends Activity implements OnClickListener 
 
 	}
 
+	protected void onActivityResult(int requestCode, int resultCode,
+            Intent data) {
+		friends.setText(FriendSearchActivity.friends);
+    }
+	
 	@Override
 	public void onClick(View v) {
 		
