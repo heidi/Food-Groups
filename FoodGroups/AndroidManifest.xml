@@ -17,6 +17,9 @@
         <activity android:name=".SearchRecipes"></activity>
         <activity android:name=".FriendSearchActivity"></activity>
         <activity android:name=".PlanMealActivity"></activity>
+        <activity android:name=".FaceBookActivity"></activity>
 		
     </application>
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

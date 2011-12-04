@@ -20,6 +20,9 @@ public class PlanMealActivity extends Activity implements OnClickListener {
         doneButton.setOnClickListener(this);
         Button addFriendsButton = (Button)findViewById(R.id.addfriends_button);
         addFriendsButton.setOnClickListener(this);
+        
+        Button fbButton = (Button) findViewById(R.id.fb_button);
+        fbButton.setOnClickListener(this);
 	}
 
 	@Override
@@ -39,6 +42,11 @@ public class PlanMealActivity extends Activity implements OnClickListener {
 				Intent i = new Intent(v.getContext(), FriendSearchActivity.class);
 				startActivityForResult(i, 0);
 			break;
+			
+			case R.id.fb_button:
+				Intent fb = new Intent(v.getContext(), FaceBookActivity.class);
+				startActivityForResult(fb, 0);
+				break;
 		}
 		
 	}

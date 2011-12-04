@@ -33,7 +33,7 @@
             <TextView android:id="@+id/textView4" android:layout_height="wrap_content" android:text="@string/carbohydrate" android:layout_width="fill_parent" android:layout_weight="40"></TextView>
             <SeekBar android:id="@+id/seekBar4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"></SeekBar>
         </LinearLayout>
-        <EditText android:inputType="textMultiLine" android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/recipe_textfeild" android:text="@string/addrecipe" android:layout_weight="75"></EditText>
+        <EditText android:inputType="textMultiLine" android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/recipe_textfeild" android:text="@string/addrecipe" android:layout_weight="75" android:gravity="top"></EditText>
         <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout7" android:layout_height="wrap_content">
             <Button android:layout_height="wrap_content" android:id="@+id/homecookingback_button" android:layout_width="fill_parent" android:layout_weight="30" android:text="@string/back"></Button>
             <Button android:id="@+id/homecookingdone_button" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="20" android:text="@string/done"></Button>
