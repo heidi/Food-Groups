@@ -38,7 +38,7 @@ public final class R {
         public static final int LinearLayout01=0x7f050038;
         public static final int LinearLayout1=0x7f05002d;
         public static final int addcooks_button=0x7f05000c;
-        public static final int addfriends_button=0x7f050042;
+        public static final int addfriends_button=0x7f050043;
         public static final int addpicture_button=0x7f05000a;
         public static final int alltimebutton=0x7f050025;
         public static final int button1=0x7f050028;
@@ -49,8 +49,8 @@ public final class R {
         public static final int dateview=0x7f05003d;
         public static final int detail=0x7f050032;
         public static final int dialog_img=0x7f05002e;
-        public static final int editText1=0x7f050043;
-        public static final int fb_button=0x7f050041;
+        public static final int editText1=0x7f050044;
+        public static final int fb_button=0x7f050042;
         public static final int frameLayout1=0x7f050033;
         public static final int frameLayout2=0x7f05003b;
         public static final int friendlist=0x7f050005;
@@ -58,6 +58,7 @@ public final class R {
         public static final int friendsearchback_button=0x7f050007;
         public static final int friendsearchdone_button=0x7f050008;
         public static final int friendsearchsearch_button=0x7f050004;
+        public static final int friendsview=0x7f050041;
         public static final int homecooking_button=0x7f050036;
         public static final int homecookingback_button=0x7f050021;
         public static final int homecookingdone_button=0x7f050022;
@@ -73,11 +74,11 @@ public final class R {
         public static final int linearLayout5=0x7f050019;
         public static final int linearLayout6=0x7f05001c;
         public static final int linearLayout7=0x7f050020;
-        public static final int listView1=0x7f050046;
+        public static final int listView1=0x7f050047;
         public static final int mealplanning_button=0x7f050039;
         public static final int menu_button=0x7f05003c;
-        public static final int planmealback_button=0x7f050044;
-        public static final int planmealdone_button=0x7f050045;
+        public static final int planmealback_button=0x7f050045;
+        public static final int planmealdone_button=0x7f050046;
         public static final int profile_button=0x7f05003a;
         public static final int recipe_textfeild=0x7f05001f;
         public static final int recipesearch_button=0x7f050037;

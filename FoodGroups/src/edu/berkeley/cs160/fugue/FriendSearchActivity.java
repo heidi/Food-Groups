@@ -18,6 +18,10 @@ public class FriendSearchActivity extends Activity implements OnClickListener, O
 	String contacts[] = {"Albert", "Alice", "Bob", "Bonnie", "Calvin", "Chris"};//, "Colleen", "Fred", "George", 
 	//		"Harry", "Heather", "Hidalgo", "Hyde", "Jessica", "John", "Matthew", "Melissa", "Vince"};
 	
+	static String friends;
+	
+	boolean chosen[] = {false, false, false, false, false, false};
+	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,8 @@ public class FriendSearchActivity extends Activity implements OnClickListener, O
         friendList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, contacts));
         friendList.setOnItemClickListener(this);
         
+        friends = "";
+        
         // TODO: add search bar listener that calls list.setSelection on the correct position in the list based on query
 	}
 
@@ -41,9 +47,17 @@ public class FriendSearchActivity extends Activity implements OnClickListener, O
 		switch (v.getId()) {
 		
 			case R.id.friendsearchdone_button:
-			// TODO: save selected friends
+				for (int i = 0; i < 6; i++) {
+					if (chosen[i]) {
+						if (friends.length() != 0) {
+							friends = friends + ", ";
+						}
+						friends = friends + contacts[i];
+					}
+				}
 		
 			case R.id.friendsearchback_button:
+				
 				Intent back = new Intent();
                 setResult(RESULT_OK, back);
                 finish();
@@ -59,7 +73,10 @@ public class FriendSearchActivity extends Activity implements OnClickListener, O
 		CheckedTextView checkView = (CheckedTextView) view;
 		
 		// if (!checkView.isChecked()) tell parent activity
+		chosen[pos] = !checkView.isChecked();
+		
 		checkView.setChecked(!checkView.isChecked());
+		
 		
 	}
 }

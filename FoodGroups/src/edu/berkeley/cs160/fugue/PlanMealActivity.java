@@ -32,11 +32,16 @@ public class PlanMealActivity extends Activity implements OnClickListener {
     private int mMinute;
 
     static final int TIME_DIALOG_ID = 1;
+    
+    private TextView friends;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.planmeal);
+        
+        friends = (TextView) findViewById(R.id.friendsview);
+        //friends.setText(FriendSearchActivity.friends);
         
         mDateDisplay = (TextView) findViewById(R.id.dateview);
         mPickDate = (Button) findViewById(R.id.datepicker_button);
@@ -72,6 +77,11 @@ public class PlanMealActivity extends Activity implements OnClickListener {
         Button fbButton = (Button) findViewById(R.id.fb_button);
         fbButton.setOnClickListener(this);
 	}
+	
+	protected void onActivityResult(int requestCode, int resultCode,
+            Intent data) {
+        updateDisplay();
+    }
 
 	@Override
 	public void onClick(View v) {
@@ -96,6 +106,8 @@ public class PlanMealActivity extends Activity implements OnClickListener {
 			case R.id.addfriends_button:
 				Intent i = new Intent(v.getContext(), FriendSearchActivity.class);
 				startActivityForResult(i, 0);
+				
+				//updateDisplay();
 				break;
 			
 			case R.id.fb_button:
@@ -108,6 +120,7 @@ public class PlanMealActivity extends Activity implements OnClickListener {
 	
 	// updates the date in the TextView
     private void updateDisplay() {
+    	friends.setText(FriendSearchActivity.friends);
         mDateDisplay.setText(
             new StringBuilder()
                     // Month is 0 based so add 1

@@ -9,7 +9,7 @@
             <Button android:text="Set Time" android:inputType="time" android:layout_width="wrap_content" android:layout_weight="5" android:layout_height="wrap_content" android:id="@+id/timepicker_button"></Button>
         </LinearLayout>
         <LinearLayout android:layout_weight="30" android:layout_width="fill_parent" android:id="@+id/linearLayout3" android:layout_height="fill_parent">
-            <TextView android:text="Alice, Bob, Chris" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+            <TextView android:text="Alice, Bob, Chris" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/friendsview"></TextView>
             <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="right" android:id="@+id/fb_button" android:text="@string/fb"></Button>
             <Button android:layout_width="wrap_content" android:id="@+id/addfriends_button" android:layout_height="wrap_content" android:text="@string/addfriends" android:layout_gravity="right"></Button>
         </LinearLayout>
