@@ -58,6 +58,7 @@ public class FriendSearchActivity extends Activity implements OnClickListener, O
 		
 		CheckedTextView checkView = (CheckedTextView) view;
 		
+		// if (!checkView.isChecked()) tell parent activity
 		checkView.setChecked(!checkView.isChecked());
 		
 	}

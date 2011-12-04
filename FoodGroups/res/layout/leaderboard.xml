@@ -9,7 +9,7 @@
         <Button android:layout_height="wrap_content" android:text="@string/thisweek" android:layout_width="wrap_content" android:id="@+id/thisweekbutton"></Button>
         <Button android:layout_height="wrap_content" android:text="@string/alltime" android:layout_width="wrap_content" android:id="@+id/alltimebutton"></Button>
     </LinearLayout>
-    <ListView android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="60" android:id="@+id/leaderboardlist"></ListView>
+    <ListView android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="60" android:id="@+id/leaderboardlist" android:padding="5dip"></ListView>
     <Button android:layout_height="wrap_content" android:text="@string/back" android:id="@+id/leaderboardback"  android:layout_width="wrap_content" android:layout_weight="20"></Button>
     
 </LinearLayout>

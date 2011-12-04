@@ -8,20 +8,24 @@ import java.util.List;
 import java.util.Vector;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class LeaderBoardActivity extends Activity implements OnClickListener {
+public class LeaderBoardActivity extends Activity implements OnClickListener, OnItemClickListener, DialogInterface.OnClickListener {
 	
 	private LayoutInflater mInflater;
 	private Vector<LBItem> meals;
@@ -34,10 +38,11 @@ public class LeaderBoardActivity extends Activity implements OnClickListener {
 	private Button today;
 	private Button thisWeek;
 	private Button allTime;
+	AlertDialog aDialog;
 	
-	String mealTitles[] = {"Veggie Pasta Salad", "Lemon Butter Salmon", "Bacon Wrapped Asparagus", "Hamburger and Fries", "Chili Cheese Omelette"};
+	String mealTitles[] = {"Veggie Pasta Salad", "Lemon Butter Salmon", "Bacon Wrapped Asparagus", "Hamburger and Fries", "Chili Cheese Omelet"};
 	String mealParticipants[] = {"Alice, Harry, Melissa", "Albert", "John, Matthew", "Fred, George", "Jessica"};
-	Integer mealPics[] = {R.drawable.pastasalad, R.drawable.lemonbuttersalmon, R.drawable.baconwrappedasparagus, R.drawable.hamburgerandfries, R.drawable.chilicheeseomelette};
+	Integer mealPics[] = {R.drawable.pastasalad, R.drawable.lemonbuttersalmon, R.drawable.baconwrappedasparagus, R.drawable.hamburgerandfries, R.drawable.chilicheeseomelet};
 	String mealScores[] = {"86", "69", "52", "31", "24"};
 	
 	String weekPeople[] = {"Jessica", "Albert", "Matthew", "Heather", "Chris"};
@@ -82,8 +87,14 @@ public class LeaderBoardActivity extends Activity implements OnClickListener {
         
         leaderboard = (ListView) findViewById(R.id.leaderboardlist);
         leaderboard.setAdapter(day);
+        leaderboard.setOnItemClickListener(this);
         
         today.setTextSize(20);
+        
+        
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("2 egg omlete with shreded cheddar cheese and leftover chili. topped with avacado :)").setTitle("Chili Cheese Omlette").setCancelable(true).setIcon(R.drawable.chilicheeseomelet);
+        aDialog = builder.create();
         
 
     }
@@ -208,6 +219,24 @@ public class LeaderBoardActivity extends Activity implements OnClickListener {
 	        	return score;
 	        }
 		}
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> list, View view, int pos, long i) {
+		// TODO Auto-generated method stub
+		aDialog.show();
+		//Intent intent = new Intent();
+        //setResult(RESULT_OK, intent);
+		//finish();
+	}
+
+	@Override
+	public void onClick(DialogInterface dialog, int which) {
+		// TODO Auto-generated method stub
+		
+		Intent intent = new Intent();
+        setResult(RESULT_OK, intent);
+		finish();
 	} 
 }
 

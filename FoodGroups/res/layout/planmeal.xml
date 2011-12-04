@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical">
         <LinearLayout android:id="@+id/linearLayout4" android:layout_width="match_parent" android:layout_weight="1" android:layout_height="60dp">
-            <TextView android:layout_height="wrap_content" android:id="@+id/textView2" android:text="Date: " android:textAppearance="?android:attr/textAppearanceMedium" android:layout_weight="1" android:layout_width="60dp"></TextView>
-            <EditText android:text="" android:layout_height="wrap_content" android:id="@+id/EditText1" android:layout_width="match_parent" android:layout_weight="5"></EditText>
+            <TextView android:layout_height="wrap_content" android:text=" . " android:textAppearance="?android:attr/textAppearanceMedium" android:layout_weight="10" android:layout_width="wrap_content" android:id="@+id/dateview" android:paddingLeft="10dip"></TextView>
+            <Button android:text="Set Date" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_weight="5" android:id="@+id/datepicker_button"></Button>
         </LinearLayout>
         <LinearLayout android:id="@+id/linearLayout5" android:layout_width="match_parent" android:layout_weight="1" android:layout_height="60dp">
-            <TextView android:layout_weight="1" android:layout_height="wrap_content" android:id="@+id/textView3" android:text="Time: " android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="60dp"></TextView>
-            <EditText android:id="@+id/editText3" android:inputType="time" android:layout_width="match_parent" android:layout_weight="5" android:layout_height="wrap_content"></EditText>
+            <TextView android:layout_weight="10" android:layout_height="wrap_content" android:text=" . " android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:id="@+id/timeview" android:paddingLeft="10dip"></TextView>
+            <Button android:text="Set Time" android:inputType="time" android:layout_width="wrap_content" android:layout_weight="5" android:layout_height="wrap_content" android:id="@+id/timepicker_button"></Button>
         </LinearLayout>
         <LinearLayout android:layout_weight="30" android:layout_width="fill_parent" android:id="@+id/linearLayout3" android:layout_height="fill_parent">
             <TextView android:text="Alice, Bob, Chris" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
             <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="right" android:id="@+id/fb_button" android:text="@string/fb"></Button>
             <Button android:layout_width="wrap_content" android:id="@+id/addfriends_button" android:layout_height="wrap_content" android:text="@string/addfriends" android:layout_gravity="right"></Button>
         </LinearLayout>
-        <EditText android:layout_width="fill_parent" android:id="@+id/editText1" android:layout_height="fill_parent" android:inputType="textMultiLine" android:layout_weight="30">
+        <EditText android:gravity="top" android:text="Let's cook together!" android:layout_width="fill_parent" android:id="@+id/editText1" android:layout_height="fill_parent" android:inputType="textMultiLine" android:layout_weight="30">
             <requestFocus></requestFocus>
         </EditText>
         <LinearLayout android:layout_weight="30" android:layout_width="fill_parent" android:id="@+id/linearLayout2" android:layout_height="fill_parent">
