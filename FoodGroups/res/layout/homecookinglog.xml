@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="fill_parent" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/linearLayout1">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="fill_parent" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/linearLayout1" android:background="@drawable/cookbg">
         <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout2" android:layout_height="wrap_content" android:layout_weight="10">
             <Button android:id="@+id/addpicture_button" android:layout_width="120dp" android:background="@drawable/blankmeal" android:layout_height="120dip" android:layout_weight="1"></Button>
             <TextView android:layout_width="wrap_content" android:layout_weight="50" android:text="Alice, Bob, Chris" android:layout_height="match_parent" android:id="@+id/friendsview"></TextView>
             <Button android:layout_width="wrap_content" android:id="@+id/addcooks_button" android:text="@string/addfriends" android:layout_weight="20" android:layout_height="match_parent"></Button>
         </LinearLayout>
         <TextView android:layout_height="wrap_content" android:id="@+id/textView6" android:layout_width="fill_parent" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_weight="1" android:text="@string/recipetitle"></TextView>
-        <EditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/recipetitle_textfield" android:text="@string/blank">
+        <EditText android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/recipetitle_textfield" android:text="@string/blank" android:layout_margin="5dip">
             <requestFocus></requestFocus>
         </EditText>
         <LinearLayout android:layout_weight="1" android:layout_width="match_parent" android:layout_height="30dp">
@@ -18,22 +18,22 @@
         	<TextView android:id="@+id/textView12" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="50" android:text="4"/>
         </LinearLayout>
         <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout3" android:layout_height="wrap_content">
-            <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:text="@string/fruit" android:layout_width="fill_parent" android:layout_weight="40"></TextView>
-            <SeekBar android:layout_weight="20" android:layout_height="wrap_content" android:id="@+id/seekBar1" android:layout_width="fill_parent"></SeekBar>
+            <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:text="@string/fruit" android:layout_width="fill_parent" android:layout_weight="40" android:paddingLeft="5dip" android:padding="3dip"></TextView>
+            <SeekBar android:layout_weight="20" android:layout_height="wrap_content" android:id="@+id/seekBar1" android:layout_width="fill_parent" android:paddingRight="5dip" android:padding="3dip"></SeekBar>
         </LinearLayout>
         <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout4" android:layout_height="wrap_content">
-            <TextView android:id="@+id/textView2" android:layout_height="wrap_content" android:text="@string/vegetable" android:layout_width="fill_parent" android:layout_weight="40"></TextView>
-            <SeekBar android:id="@+id/seekBar2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"></SeekBar>
+            <TextView android:id="@+id/textView2" android:layout_height="wrap_content" android:text="@string/vegetable" android:layout_width="fill_parent" android:layout_weight="40" android:paddingLeft="5dip" android:padding="3dip"></TextView>
+            <SeekBar android:id="@+id/seekBar2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20" android:padding="3dip"></SeekBar>
         </LinearLayout>
         <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout5" android:layout_height="wrap_content">
-            <TextView android:id="@+id/textView3" android:layout_height="wrap_content" android:text="@string/protein" android:layout_width="fill_parent" android:layout_weight="40"></TextView>
-            <SeekBar android:id="@+id/seekBar3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"></SeekBar>
+            <TextView android:id="@+id/textView3" android:layout_height="wrap_content" android:text="@string/protein" android:layout_width="fill_parent" android:layout_weight="40" android:paddingLeft="5dip" android:padding="3dip"></TextView>
+            <SeekBar android:id="@+id/seekBar3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20" android:padding="3dip"></SeekBar>
         </LinearLayout>
         <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout6" android:layout_height="wrap_content">
-            <TextView android:id="@+id/textView4" android:layout_height="wrap_content" android:text="@string/carbohydrate" android:layout_width="fill_parent" android:layout_weight="40"></TextView>
-            <SeekBar android:id="@+id/seekBar4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"></SeekBar>
+            <TextView android:id="@+id/textView4" android:layout_height="wrap_content" android:text="@string/carbohydrate" android:layout_width="fill_parent" android:layout_weight="40" android:paddingLeft="5dip" android:padding="3dip"></TextView>
+            <SeekBar android:id="@+id/seekBar4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20" android:padding="3dip"></SeekBar>
         </LinearLayout>
-        <EditText android:inputType="textMultiLine" android:layout_width="fill_parent" android:id="@+id/recipe_textfeild" android:text="@string/addrecipe" android:gravity="top" android:layout_weight="75" android:layout_height="wrap_content"></EditText>
+        <EditText android:inputType="textMultiLine" android:layout_width="fill_parent" android:id="@+id/recipe_textfeild" android:text="@string/addrecipe" android:gravity="top" android:layout_weight="75" android:layout_height="wrap_content" android:layout_margin="5dip"></EditText>
         <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout7" android:layout_height="wrap_content">
             <Button android:layout_height="wrap_content" android:id="@+id/homecookingback_button" android:layout_width="fill_parent" android:layout_weight="30" android:text="@string/back"></Button>
             <Button android:id="@+id/homecookingdone_button" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="20" android:text="@string/done"></Button>

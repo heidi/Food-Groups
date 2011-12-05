@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical">
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/planbg">
         <LinearLayout android:id="@+id/linearLayout4" android:layout_width="match_parent" android:layout_weight="1" android:layout_height="60dp">
-            <TextView android:layout_height="wrap_content" android:text=" . " android:textAppearance="?android:attr/textAppearanceMedium" android:layout_weight="10" android:layout_width="wrap_content" android:id="@+id/dateview" android:paddingLeft="10dip"></TextView>
-            <Button android:text="Set Date" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_weight="5" android:id="@+id/datepicker_button"></Button>
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="5" android:text="Set Date" android:id="@+id/datepicker_button" android:layout_margin="5dip"></Button>
+            <TextView android:layout_height="wrap_content" android:text=" . " android:textAppearance="?android:attr/textAppearanceMedium" android:layout_weight="10" android:layout_width="wrap_content" android:id="@+id/dateview" android:layout_marginRight="10dip" android:padding="5dip" android:textColor="@color/black" android:gravity="right"></TextView>
         </LinearLayout>
         <LinearLayout android:id="@+id/linearLayout5" android:layout_width="match_parent" android:layout_weight="1" android:layout_height="60dp">
-            <TextView android:layout_weight="10" android:layout_height="wrap_content" android:text=" . " android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:id="@+id/timeview" android:paddingLeft="10dip"></TextView>
-            <Button android:text="Set Time" android:inputType="time" android:layout_width="wrap_content" android:layout_weight="5" android:layout_height="wrap_content" android:id="@+id/timepicker_button"></Button>
+            <Button android:inputType="time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="5" android:text="Set Time" android:id="@+id/timepicker_button" android:layout_margin="5dip"></Button>
+            <TextView android:layout_weight="10" android:layout_height="wrap_content" android:text=" . " android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:id="@+id/timeview" android:layout_marginRight="10dip" android:padding="5dip" android:textColor="@color/black" android:gravity="right"></TextView>
         </LinearLayout>
-        <LinearLayout android:layout_weight="30" android:layout_width="fill_parent" android:id="@+id/linearLayout3" android:layout_height="fill_parent">
-            <TextView android:text="Alice, Bob, Chris" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/friendsview"></TextView>
+        <LinearLayout android:layout_weight="30" android:layout_width="fill_parent" android:id="@+id/linearLayout3" android:layout_height="fill_parent" android:gravity="center">
             <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="right" android:id="@+id/fb_button" android:text="@string/fb"></Button>
-            <Button android:layout_width="wrap_content" android:id="@+id/addfriends_button" android:layout_height="wrap_content" android:text="@string/addfriends" android:layout_gravity="right"></Button>
+            <Button android:layout_width="wrap_content" android:id="@+id/addfriends_button" android:layout_height="wrap_content" android:text="@string/addfriends" android:layout_margin="5dip" android:layout_gravity="center_vertical|right"></Button>
+            <TextView android:text="Alice, Bob, Chris" android:id="@+id/friendsview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColorHighlight="@color/grey" android:textColor="@color/black"></TextView>
         </LinearLayout>
-        <EditText android:gravity="top" android:text="Let's cook together!" android:layout_width="fill_parent" android:id="@+id/editText1" android:layout_height="fill_parent" android:inputType="textMultiLine" android:layout_weight="30">
+        <EditText android:gravity="top" android:text="Let's cook together!" android:layout_width="fill_parent" android:id="@+id/editText1" android:layout_height="fill_parent" android:inputType="textMultiLine" android:layout_weight="30" android:layout_gravity="bottom" android:layout_margin="5dip">
             <requestFocus></requestFocus>
         </EditText>
-        <LinearLayout android:layout_weight="30" android:layout_width="fill_parent" android:id="@+id/linearLayout2" android:layout_height="fill_parent">
+        <LinearLayout android:layout_weight="30" android:layout_width="fill_parent" android:id="@+id/linearLayout2" android:layout_height="fill_parent" android:gravity="bottom">
             <Button android:layout_weight="30" android:text="@string/back" android:layout_width="fill_parent" android:id="@+id/planmealback_button" android:layout_height="wrap_content"></Button>
             <Button android:layout_weight="20" android:text="@string/done" android:layout_width="fill_parent" android:id="@+id/planmealdone_button" android:layout_height="wrap_content"></Button>
         </LinearLayout>
